@@ -14,7 +14,7 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY ./file.pdf ./file.pdf
-COPY ./extract_urls.sh ./extract_urls.sh
+COPY ./extract_urls.py ./extract_urls.py
 
-CMD bash ./extract_urls.sh file.pdf && \
+CMD python3 ./extract_urls.py && \
     { echo -n; sleep 15; cat url_list; } | bash ./archiveurl/archiveurl
