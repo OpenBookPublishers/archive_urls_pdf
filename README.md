@@ -6,4 +6,6 @@ Store the PDF file as `file.pdf` in the project folder and then run:
 
 $ `docker build . -t openbookpublishers/archive_urls_pdf`
 
-$ `docker run --rm openbookpublishers/archive_urls_pdf`
+$ `docker run --rm \
+	-v /path/to/local/file.pdf:/archive_urls_pdf/file.pdf \
+	openbookpublishers/archive_urls_pdf`
