@@ -16,4 +16,4 @@ COPY ./file.pdf ./file.pdf
 COPY ./extract_urls.sh ./extract_urls.sh
 
 CMD bash ./extract_urls.sh file.pdf && \
-    cat url_list | bash ./archiveurl/archiveurl
+    { echo -n; sleep 15; cat url_list; } | bash ./archiveurl/archiveurl
