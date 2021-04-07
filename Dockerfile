@@ -13,7 +13,6 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY ./file.pdf ./file.pdf
 COPY ./extract_urls.py ./extract_urls.py
 
 CMD python3 ./extract_urls.py && \
